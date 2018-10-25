@@ -1,0 +1,136 @@
+ul,li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+#xxx {
+  display: block;
+  position: fixed; /* 解决手机上 画布里的东西移动的问题 */
+  top: 0;
+  left: 0;
+  /* bottom: 0; */
+  /* right: 0; */
+}
+
+body{
+  margin: 0px;
+}
+
+canvas {
+  display: block;
+}
+.actions{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.actions>svg{
+  width: 35px;
+  height: 35px;
+  margin: 5px;
+  transition: all .3s;
+}
+
+.actions > svg.largenEraser{
+  width: 45px;
+  height: 45px;
+  margin: 0; /* 解决了位移问题 */
+}
+.actions > svg.largenPen{
+  width: 45px;
+  height: 45px;
+  margin: 0; /* 解决了位移问题 */
+}
+.colors {
+  position: fixed;
+  top: 12px;
+  right: 3px;
+  /* border: 1px solid red; */
+}
+
+.colors>li{
+  width: 45px;
+  height: 20px;
+  border: 1px solid #aaa;
+  display: inline-block;
+  margin-right: 12px;
+  border-radius: 50%;
+}
+
+#red {
+  background-color: red;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#black {
+  background-color: black;
+}
+
+#purple {
+  background-color: purple;
+}
+
+.colors> li.largen {
+  transform: scale(1.2);
+  box-shadow: 0 0 3px rgba(0,0,0,0.9);
+  transition: all .3s;
+}
+
+.sizes {
+  position: fixed;
+  right: 6px;
+  top: 65px;
+  border: 1px solid lightpink;
+  /* background-color: #cccccc; */
+  text-align: center;
+  
+}
+
+.sizes > .one{
+  width: 45px;
+  border-top: 2px solid gray;
+}
+
+.sizes > .two{
+  width: 45px;
+  border-top: 4px solid gray;
+}
+.sizes > .three{
+  width: 45px;
+  border-top: 8px solid gray;
+}
+
+.sizes > li {
+  margin:10px;
+}
+#clear {
+  position: fixed;
+  left: 1px;
+  bottom: 1px;
+  width: 1.8em;
+  height: 1.8em;
+  /* transform: scale(2); */
+}
+#Save {
+  position: fixed;
+  right: 10px;
+  bottom: 7px;
+  transform: scale(1.9);
+  color: #666;
+}
+/* .actions > #brush{
+  display: none;
+}
+
+.actions.x > #brush{
+  display: inline-block;
+}
+.actions.x > #eraser{
+  display: none
+}
+ */
